@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#fbfefe"/>
+  <g fill="#0f172a" font-family="Arial, Helvetica, sans-serif">
+    <rect x="40" y="40" width="720" height="520" rx="14" fill="#fff"/>
+    <rect x="80" y="90" width="240" height="160" rx="6" fill="#eefbf9"/>
+    <rect x="360" y="90" width="360" height="160" rx="6" fill="#e8f7f4"/>
+    <text x="100" y="320" font-size="20">Prototipagem e P&amp;D</text>
+  </g>
+</svg>
