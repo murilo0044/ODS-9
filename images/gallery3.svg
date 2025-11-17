@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
-  <rect width="800" height="600" fill="#fbfdfc"/>
-  <g fill="#0f172a" font-family="Arial, Helvetica, sans-serif">
-    <rect x="30" y="30" width="740" height="540" rx="12" fill="#fff"/>
-    <rect x="80" y="80" width="600" height="300" rx="8" fill="#eefbf9"/>
-    <text x="100" y="420" font-size="18">Prototipagem e testes</text>
-  </g>
-</svg>
