@@ -1,0 +1,108 @@
+/* Fonte e variáveis */
+:root{
+  --bg:#f7f9fb;
+  --card:#ffffff;
+  --primary:#2b7a78;
+  --accent:#7bd389;
+  --muted:#6b7280;
+  --radius:14px;
+  --max-width:1100px;
+}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:var(--bg);
+  color:#0f172a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:var(--max-width);margin:0 auto;padding:1.25rem;}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;}
+.logo{font-weight:700;color:var(--primary);margin:0;}
+.logo{display:flex;align-items:center;gap:.6rem;font-weight:700;color:var(--primary);margin:0}
+.logo-icon{width:36px;height:36px;display:inline-block}
+.nav{display:flex;gap:0.75rem;align-items:center}
+.nav-link{color:var(--muted);text-decoration:none;padding:0.4rem 0.6rem;border-radius:10px;transition:background .18s,color .18s}
+.nav-link:hover{background:rgba(43,122,120,0.06);color:var(--primary)}
+/* Header */
+.site-header{backdrop-filter: blur(6px);}
+/* Hero */
+.hero{background:linear-gradient(180deg, rgba(123,211,137,0.06), transparent);padding:2rem 0;border-radius:calc(var(--radius) - 4px);margin:1rem 0}
+.hero-inner{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
+.hero-text{flex:1 1 360px}
+.hero-text h2{margin:0 0 .6rem;font-size:1.6rem}
+.hero-text p{margin:0 0 1rem;color:var(--muted)}
+.hero-image{flex:1 1 300px;border-radius:12px;overflow:hidden;box-shadow:0 8px 30px rgba(11,22,40,0.06)}
+.hero-image img{width:100%;height:auto;object-fit:cover;display:block}
+/* Sections */
+.section{padding:1.25rem 0}
+.card-section{background:var(--card);border-radius:12px;padding:1.25rem;margin-bottom:1rem;box-shadow:0 6px 18px rgba(11,22,40,0.03)}
+.muted{color:var(--muted);}
+/* Grid */
+.grid{display:grid;gap:1rem;grid-template-columns:repeat(3,1fr)}
+.features .feature{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 6px 18px rgba(11,22,40,0.03);text-align:left;align-self:flex-start}
+.feature img{width:100%;height:180px;object-fit:cover;border-radius:8px;margin-bottom:.6rem}
+.feature h4{margin:0 0 .4rem}
+.feature p{margin:0 0 .8rem;color:var(--muted)}
+.gallery-grid{grid-template-columns:repeat(3,1fr)}
+.gallery-grid img{width:100%;height:160px;object-fit:cover;border-radius:10px}
+
+/* Estilos para seção de notícias */
+.news-grid{display:grid;gap:1.5rem;grid-template-columns:repeat(3,1fr)}
+.news-card{background:var(--card);border-radius:12px;padding:1rem;box-shadow:0 6px 18px rgba(11,22,40,0.03);overflow:hidden;display:flex;flex-direction:column}
+.news-card img{width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:.8rem}
+.news-card h4{margin:0 0 .6rem;font-size:1.1rem;color:var(--primary)}
+.news-card p{margin:0 0 1rem;color:var(--muted);line-height:1.5;flex-grow:1}
+.news-card .btn{align-self:flex-start;margin-top:auto}
+
+/* Garantir que imagens locais SVG/JPG/PNG sejam exibidas corretamente */
+img{display:block;max-width:100%;height:auto}
+
+/* Estilos para "Ver mais" usando details/summary */
+/* Toggle (checkbox) based show/hide for "Ver mais" with close at bottom */
+.toggle-input{display:none}
+.toggle-summary{all:unset;cursor:pointer;display:inline-block;padding:.5rem .9rem;border-radius:999px;background:rgba(43,122,120,0.08);color:var(--primary);font-weight:600;transition:all .24s cubic-bezier(0.34, 1.56, 0.64, 1);user-select:none}
+.toggle-input:checked + .toggle-summary{box-shadow:0 8px 20px rgba(43,122,120,0.08);transform:translateY(-2px)}
+.toggle-summary:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(43,122,120,0.12);background:rgba(43,122,120,0.12)}
+.toggle-summary:active{transform:translateY(-1px) scale(0.97)}
+.toggle-summary + .more-content{max-height:0;overflow:hidden;transition:none}
+.toggle-input:checked ~ .more-content{max-height:260px;padding-top:.6rem;transition:max-height .32s ease,padding .28s ease}
+.toggle-input:not(:checked) ~ .more-content{max-height:0;padding-top:0;transition:none}
+
+/* esconder botão "Ver mais" quando aberto */
+.toggle-input:checked + .toggle-summary{display:none}
+
+/* close-label: aparece/fecha com mesmas animações do "Ver mais" */
+.close-label{cursor:pointer;display:inline-block;margin-top:0.6rem;padding:.5rem .9rem;border-radius:999px;background:rgba(43,122,120,0.08);color:var(--primary);font-weight:600;user-select:none;transition:all .36s cubic-bezier(0.34, 1.56, 0.64, 1)}
+.toggle-input:checked ~ .more-content .close-label{opacity:1;transform:none;pointer-events:auto;box-shadow:0 8px 20px rgba(43,122,120,0.08)}
+.toggle-input:not(:checked) ~ .more-content .close-label{opacity:0;transform:translateY(6px);pointer-events:none;visibility:hidden}
+.close-label:hover{transform:translateY(-5px) scale(1.05);box-shadow:0 14px 32px rgba(43,122,120,0.16);background:rgba(43,122,120,0.14);transition:all .36s cubic-bezier(0.34, 1.56, 0.64, 1)}
+.close-label:active{transform:translateY(-1px) scale(0.96);transition:all .12s ease}
+.more-content p{margin:0;color:var(--muted);line-height:1.45}
+/* Buttons */
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:999px;border:0;cursor:pointer;font-weight:600;text-decoration:none;transition:all .24s cubic-bezier(0.34, 1.56, 0.64, 1);user-select:none}
+.btn:active{transform:scale(0.96)}
+.btn-soft{background:rgba(43,122,120,0.08);color:var(--primary);transition:all .24s cubic-bezier(0.34, 1.56, 0.64, 1)}
+.btn-soft:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(43,122,120,0.12);background:rgba(43,122,120,0.12)}
+.btn-soft:active{transform:translateY(-1px) scale(0.98)}
+.btn-primary{background:linear-gradient(90deg,var(--primary),#1e6b69);color:white;box-shadow:0 10px 30px rgba(43,122,120,0.12);transition:all .24s cubic-bezier(0.34, 1.56, 0.64, 1)}
+.btn-primary:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(43,122,120,0.18)}
+.btn-primary:active{transform:translateY(-2px) scale(0.98)}
+/* Footer */
+.site-footer{padding:1.25rem 0;margin-top:2rem;color:var(--muted)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem}
+/* Responsivo */
+@media (max-width:900px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .gallery-grid img{height:140px}
+}
+@media (max-width:600px){
+  .header-inner{flex-direction:column;align-items:flex-start}
+  .grid{grid-template-columns:1fr}
+  .hero-inner{flex-direction:column}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+}
+/* Pequenos refinamentos visuais */
+*{box-sizing:border-box}
+a.btn{border:none}

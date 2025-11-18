@@ -1,0 +1,21 @@
+# Site ODS 9 (HTML + CSS)
+
+Pequeno site explicativo sobre a ODS 9 (Indústria, Inovação e Infraestrutura).
+
+Como abrir localmente:
+
+- Abra o arquivo `index.html` no seu navegador (duplo clique ou `Abrir com > Navegador`).
+- Não é necessário servidor; tudo é estático.
+
+Observações:
+- As imagens são carregadas do Unsplash por palavras-chave (`source.unsplash.com`) para combinar com a ODS 9 — isto fornece imagens relevantes automaticamente.
+- O site usa apenas HTML e CSS; não há JavaScript.
+
+Imagens: inicialmente usávamos imagens dinâmicas do Unsplash por palavras-chave. Agora há imagens locais (SVG placeholders) dentro do diretório `images/`.
+
+Se preferir fotos reais (JPEG/PNG) em vez dos SVGs de placeholder, posso baixar imagens específicas do Unsplash e salvá-las em `images/` com os nomes correspondentes (ex.: `images/hero.jpg`). Diga se quer que eu faça o download das fotos reais e substitua os SVGs.
+
+Se quiser, posso:
+- Ajustar textos e imagens.
+- Gerar versões com cores diferentes.
+- Criar uma versão com navegação fixa ou menu mobile. 
